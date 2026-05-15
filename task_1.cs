@@ -69,9 +69,19 @@ class TMan
     }
     public int GetYearOfBirth()
     {
-        const int ThisYear = 2026;
-        int YearOfBirth = 0;
-        return YearOfBirth = 2026 - Age;
+        DateTime today = DateTime.Now;
+        int currentYear = today.Year;
+        int currentMonth = today.Month;
+        int currentDay = today.Day;
+
+        int yearOfBirth = currentYear - Age;
+
+        if (currentMonth < Month || (currentMonth == Month && currentDay < Day))
+        {
+            yearOfBirth--;
+        }
+
+        return yearOfBirth;
     }
 }
 
