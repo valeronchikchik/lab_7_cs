@@ -66,6 +66,10 @@ class TMan
                $"Знак зодіаку: {GetHoroscope()}\n" +
                $"Категорія: {GetCategory()}";
     }
+    public int GetAge()
+    {
+        return Age;
+    }
 }
 
 class Program
@@ -75,5 +79,6 @@ class Program
         TMan person = new TMan("Іван", 20, "Чоловіча", 15, 5);
 
         Console.WriteLine(person.ToString());
+        person.GetAge;
     }
 }
