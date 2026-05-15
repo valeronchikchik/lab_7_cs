@@ -2,6 +2,7 @@ using System;
 
 class TMan
 {
+    //int YearOfBirth = 0;
     public string Name { get; set; }
     public int Age { get; set; }
     public string Gender { get; set; }
@@ -66,9 +67,11 @@ class TMan
                $"Знак зодіаку: {GetHoroscope()}\n" +
                $"Категорія: {GetCategory()}";
     }
-    public int GetAge()
+    public int GetYearOfBirth()
     {
-        return Age;
+        const int ThisYear = 2026;
+        int YearOfBirth = 0;
+        return YearOfBirth = 2026 - Age;
     }
 }
 
@@ -79,6 +82,6 @@ class Program
         TMan person = new TMan("Іван", 20, "Чоловіча", 15, 5);
 
         Console.WriteLine(person.ToString());
-        person.GetAge;
+        Console.WriteLine("Рік народження: " + person.GetYearOfBirth());
     }
 }
